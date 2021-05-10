@@ -1,8 +1,9 @@
 import { render } from '@testing-library/react';
 import React, { useState } from 'react';
+import Translator from './Translator';
 
 const Home = () => {
-  const [number, setNumber] = useState<number>();
+  const [number, setNumber] = useState<number>(0);
 
   const onChange = (event: React.FormEvent<HTMLInputElement>) => {
     setNumber(+event.currentTarget.value);
@@ -16,9 +17,7 @@ const Home = () => {
           <input id="number" type="text" onChange={onChange}/>
         </div>
       </form>
-      <div>
-        Number to convert: { number }
-      </div>
+      <Translator number={number} />
     </div>
   );
 }
