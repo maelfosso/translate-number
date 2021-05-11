@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
+import * as d3 from 'd3';
 import useD3 from '../hooks/useD3';
 
 type TranslatorProps = {
@@ -8,8 +9,26 @@ type TranslatorProps = {
 
 const Translator = ({ number }: TranslatorProps) => {
   const ref = useD3((svg) => {
-    const height: number = 50;
-    const width: number = 50;
+    const height: number = 150;
+    const width: number = 150;
+
+    const xAxis = d3.scaleLinear()
+      .domain([0, width])
+      .range([0, width])
+    ;
+    const yAxis = d3.scaleLinear()
+      .domain([0, height])
+      .range([0, height])
+    ;
+
+    svg
+      .select('.vline')
+      .append('line')
+      .attr('x1', xAxis(74))
+      .attr('y1', yAxis(0))
+      .attr('x2', xAxis(76))
+      .attr('y2', yAxis(150))
+      .attr('class', 'line main-vline')
 
   }, [[number]]);
   
