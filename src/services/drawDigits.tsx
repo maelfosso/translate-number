@@ -30,6 +30,10 @@ export const drawDigits = (svg: Selection<SVGGElement, unknown, null, undefined>
         drawFive(g, index);
 
         break;
+      case 6:
+        drawSix(g, index);
+
+        break;
       default:
         break;
     }
@@ -282,6 +286,53 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(150))
       ;
+      break;
+    default:
+      break;
+  }
+}
+
+const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
+  switch (position) {
+    case 0:
+      svg
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(100))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(50))
+      
+      break;
+    case 1:
+      svg
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(50))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(50))
+      
+      break;
+    case 2:
+      svg
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(100))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(100))
+      
+      break;
+    case 3:
+      svg
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(50))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(100))
+      
       break;
     default:
       break;
