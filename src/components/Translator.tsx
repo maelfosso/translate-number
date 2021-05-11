@@ -100,7 +100,7 @@ const Translator = ({ number }: TranslatorProps) => {
             }}
           >
           </svg>
-          <canvas id="canvas" ref={canvasRef}></canvas>
+          <canvas id="canvas" ref={canvasRef} style={{ display: 'none'}}></canvas>
         </div>
         <div>
           <button type="button" onClick={downloadImage}>Download image</button>
