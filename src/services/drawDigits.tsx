@@ -53,13 +53,57 @@ export const drawDigits = (svg: Selection<SVGGElement, unknown, null, undefined>
 }
 
 const drawOne = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
-  svg
-    .append('line')
-    .attr('class', `line one position-${position}`)
-    .attr('x1', xAxis(75))
-    .attr('y1', yAxis(0))
-    .attr('x2', xAxis(75))
-    .attr('y2', yAxis(25))
+
+  switch (position) {
+    case 0:
+      svg
+        .append('line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(0))
+      ;
+
+      break;
+    case 1:
+      svg
+        .append('line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(0))
+      ;
+      
+      break;
+    case 2:
+      svg
+        .append('line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(150))
+      ;
+      break;
+    case 3:
+      svg
+        .append('line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(150))
+      ;
+      break;
+    default:
+      break;
+  }
 }
 
 const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
@@ -67,7 +111,8 @@ const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position
     case 0:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(100))
@@ -77,7 +122,8 @@ const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position
     case 1:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(50))
@@ -87,7 +133,8 @@ const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position
     case 2:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(100))
@@ -97,7 +144,8 @@ const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position
     case 3:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(50))
@@ -114,7 +162,8 @@ const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
     case 0:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(100))
@@ -124,7 +173,8 @@ const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
     case 1:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(50))
@@ -134,7 +184,9 @@ const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
     case 2:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(100))
@@ -144,7 +196,8 @@ const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
     case 3:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(50))
@@ -161,7 +214,8 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 0:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(100))
@@ -171,7 +225,8 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 1:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(50))
@@ -181,7 +236,8 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 2:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(100))
@@ -191,7 +247,8 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 3:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(50))
@@ -213,7 +270,8 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 0:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(100))
@@ -222,7 +280,8 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
 
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(100))
@@ -233,7 +292,8 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 1:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(50))
@@ -242,7 +302,8 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
 
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(50))
@@ -253,7 +314,8 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 2:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(100))
@@ -262,7 +324,8 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
 
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(100))
@@ -272,7 +335,8 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 3:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(50))
@@ -281,7 +345,8 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
 
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(50))
@@ -298,7 +363,8 @@ const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position
     case 0:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(100))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(100))
@@ -308,7 +374,8 @@ const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position
     case 1:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(50))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(50))
@@ -318,7 +385,8 @@ const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position
     case 2:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(100))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(100))
@@ -328,7 +396,8 @@ const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position
     case 3:
       svg
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(50))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(50))
@@ -351,14 +420,16 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
     case 0:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(100))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(100))
         .attr('y2', yAxis(50))
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(100))
@@ -368,7 +439,8 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
     case 1:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(50))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(50))
@@ -376,7 +448,8 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
       ;
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(50))
@@ -386,7 +459,8 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
     case 2:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(100))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(100))
@@ -395,7 +469,8 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
 
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(100))
@@ -405,7 +480,8 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
     case 3:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(50))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(50))
@@ -413,7 +489,8 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
       ;
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(50))
@@ -435,7 +512,8 @@ const drawHeight = (svg: Selection<SVGGElement, unknown, null, undefined>, posit
     case 0:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(100))
@@ -443,7 +521,8 @@ const drawHeight = (svg: Selection<SVGGElement, unknown, null, undefined>, posit
       ;
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(100))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(100))
@@ -452,14 +531,16 @@ const drawHeight = (svg: Selection<SVGGElement, unknown, null, undefined>, posit
     case 1:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(50))
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(50))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(50))
@@ -468,14 +549,16 @@ const drawHeight = (svg: Selection<SVGGElement, unknown, null, undefined>, posit
     case 2:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(100))
         .attr('y2', yAxis(100))
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(100))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(100))
@@ -484,14 +567,16 @@ const drawHeight = (svg: Selection<SVGGElement, unknown, null, undefined>, posit
     case 3:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(100))
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(50))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(50))
@@ -501,7 +586,6 @@ const drawHeight = (svg: Selection<SVGGElement, unknown, null, undefined>, posit
       break;
   }
 }
-
 
 const drawNine = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
   let g;
@@ -513,7 +597,8 @@ const drawNine = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 0:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(100))
@@ -521,7 +606,8 @@ const drawNine = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
       ;
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(100))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(100))
@@ -538,21 +624,24 @@ const drawNine = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 1:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(50))
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(50))
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(50))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(50))
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(0))
         .attr('x2', xAxis(50))
@@ -562,21 +651,24 @@ const drawNine = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 2:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(100))
         .attr('y2', yAxis(100))
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(100))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(100))
         .attr('y2', yAxis(100))           
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(100))
@@ -586,21 +678,24 @@ const drawNine = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
     case 3:
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(100))
       g
         .append('line')
-        .attr('class', `line two position-${position}`)
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(50))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(100))
       g
         .append('line')
-        .attr('class', 'line')
+        .attr('stroke', `black`)
+        .attr('stroke-width', 2)
         .attr('x1', xAxis(75))
         .attr('y1', yAxis(150))
         .attr('x2', xAxis(50))
