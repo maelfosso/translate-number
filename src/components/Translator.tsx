@@ -24,18 +24,6 @@ const Translator = ({ number }: TranslatorProps) => {
       .attr('transform', `translate(10, 10)`);
     ;
 
-    // g
-    //   .select('.vline')
-    //   .selectAll('*')
-    //   .remove()
-    // ;
-
-    // g
-    //   .select('.digits')
-    //   .selectAll('*')
-    //   .remove()
-    // ;
-
     g
       .append('g')
       .attr('class', '.vline')
@@ -65,12 +53,6 @@ const Translator = ({ number }: TranslatorProps) => {
               background: 'red'
             }}
           >
-            {/* <g className="g">
-              <g className="vline"></g>
-              <g className="hline-1"></g>
-              <g className="hline-2"></g>
-              <g className="digits"></g>
-            </g> */}
           </svg>
         </div>
       </div>

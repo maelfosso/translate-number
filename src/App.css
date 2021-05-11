@@ -8,8 +8,12 @@
   stroke-width: 2;
 }
 
-.digits {
-  /* transform: translate(10px, 10px); */
+.error {
+  padding: 5px;
+  background: red;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
 }
 
 .one.position-0 {

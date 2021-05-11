@@ -4,9 +4,17 @@ import Translator from './Translator';
 
 const Home = () => {
   const [number, setNumber] = useState<number>(0);
+  const [error, setError] = useState("");
 
   const onChange = (event: React.FormEvent<HTMLInputElement>) => {
-    setNumber(+event.currentTarget.value);
+    const { value } = event.currentTarget;
+    if (0 <= +value && +value < 10000) {
+      setNumber(+value);
+      setError("");
+    } else {
+      setError("Please, a number between 0 and 9999")
+      setNumber(0);
+    }
   }
 
   return (
@@ -15,6 +23,7 @@ const Home = () => {
         <div>
           <label htmlFor="number">Enter the number</label>
           <input id="number" type="text" onChange={onChange}/>
+          {error && <div className="error">{error}</div> }
         </div>
       </form>
       <Translator number={number} />
