@@ -26,6 +26,10 @@ export const drawDigits = (svg: Selection<SVGGElement, unknown, null, undefined>
         drawFour(g, index);
 
         break;
+      case 5:
+        drawFive(g, index);
+
+        break;
       default:
         break;
     }
@@ -177,6 +181,107 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(150))
       
+      break;
+    default:
+      break;
+  }
+}
+
+const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
+  let g;
+
+  switch (position) {
+    case 0:
+      g = svg
+        .append('g')
+        .attr('class', 'five')
+      ;
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(50))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(0))
+      ;
+
+      g
+        .append('line')
+        .attr('class', 'line')
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(0))
+      ;
+
+      break;
+    case 1:
+      g = svg
+        .append('g')
+        .attr('class', 'five')
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(50))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(0))
+      ;      
+
+      g
+        .append('line')
+        .attr('class', 'line')
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(0))
+      ;
+      
+      break;
+    case 2:
+      g = svg
+        .append('g')
+        .attr('class', 'five')
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(100))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(150))
+      ;            
+
+      g
+        .append('line')
+        .attr('class', 'line')
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(150))
+      ;
+      break;
+    case 3:
+      g = svg
+        .append('g')
+        .attr('class', 'five')
+      ;
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(100))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(150))
+                  
+
+      g
+        .append('line')
+        .attr('class', 'line')
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(150))
+      ;
       break;
     default:
       break;
