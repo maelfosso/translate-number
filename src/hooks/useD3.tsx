@@ -7,7 +7,7 @@ export type RenderFnType = (svg: Selection<SVGSVGElement | null, unknown, null, 
 const useD3 = (renderFn: RenderFnType, dependencies: [number[] | null]) => {
   const ref = useRef<SVGSVGElement | null>(null);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     renderFn(d3.select(ref.current));
     return () => {};
   }, dependencies);

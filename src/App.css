@@ -7,3 +7,27 @@
   stroke: black;
   stroke-width: 2;
 }
+
+.digits {
+  /* transform: translate(10px, 10px); */
+}
+
+.one.position-0 {
+  transform: rotate(-90deg) translate(-6px, -15px);
+  transform-origin: top;    
+}
+
+.one.position-1 {
+  transform: rotate(90deg) translate(16px, -4px);
+  transform-origin: top;
+}
+
+.one.position-2 {
+  transform: rotate(-90deg) translate(-124px, -15px);
+  transform-origin: top;
+}
+
+.one.position-3 {
+  transform: rotate(90deg) translate(134px, -4px);
+  transform-origin: top;
+}
