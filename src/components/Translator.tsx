@@ -2,12 +2,17 @@ import React from 'react';
 import PropTypes from "prop-types";
 import * as d3 from 'd3';
 import useD3 from '../hooks/useD3';
+import { drawDigits } from '../services/drawDigits';
 
 type TranslatorProps = {
-  number: number;
+  number: number,
 }
 
 const Translator = ({ number }: TranslatorProps) => {
+  const numberToDigits = (n: number) => Array.from(n.toString()).map(Number);
+
+  const digits = numberToDigits(number);
+
   const ref = useD3((svg) => {
     const height: number = 150;
     const width: number = 150;
@@ -28,9 +33,12 @@ const Translator = ({ number }: TranslatorProps) => {
       .attr('y1', yAxis(0))
       .attr('x2', xAxis(76))
       .attr('y2', yAxis(150))
-      .attr('class', 'line main-vline')
+      .attr('class', 'line main-vline');
 
-  }, [[number]]);
+    drawDigits(svg, digits);
+
+  }, [digits]);
+  
   
   return (
     <div>
