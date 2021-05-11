@@ -34,6 +34,10 @@ export const drawDigits = (svg: Selection<SVGGElement, unknown, null, undefined>
         drawSix(g, index);
 
         break;
+      case 7:
+        drawSeven(g, index);
+
+        break;
       default:
         break;
     }
@@ -193,13 +197,12 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
 
 const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
   let g;
-
+  g = svg
+      .append('g')
+      .attr('class', 'five')
+    ;
   switch (position) {
     case 0:
-      g = svg
-        .append('g')
-        .attr('class', 'five')
-      ;
       g
         .append('line')
         .attr('class', `line two position-${position}`)
@@ -220,9 +223,6 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
 
       break;
     case 1:
-      g = svg
-        .append('g')
-        .attr('class', 'five')
       g
         .append('line')
         .attr('class', `line two position-${position}`)
@@ -243,9 +243,6 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
       
       break;
     case 2:
-      g = svg
-        .append('g')
-        .attr('class', 'five')
       g
         .append('line')
         .attr('class', `line two position-${position}`)
@@ -265,10 +262,6 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
       ;
       break;
     case 3:
-      g = svg
-        .append('g')
-        .attr('class', 'five')
-      ;
       g
         .append('line')
         .attr('class', `line two position-${position}`)
@@ -276,7 +269,7 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
         .attr('y1', yAxis(100))
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(150))
-                  
+      ;
 
       g
         .append('line')
@@ -333,6 +326,91 @@ const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(100))
       
+      break;
+    default:
+      break;
+  }
+}
+
+const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
+  let g;
+  g = svg
+    .append('g')
+    .attr('class', 'five')
+  ;
+
+  switch (position) {
+    case 0:
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(100))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(50))
+      g
+        .append('line')
+        .attr('class', 'line')
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(0))
+      ;
+      break;
+    case 1:
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(50))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(50))
+      ;
+      g
+        .append('line')
+        .attr('class', 'line')
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(0))
+      ;
+      break;
+    case 2:
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(100))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(100))
+      ;            
+
+      g
+        .append('line')
+        .attr('class', 'line')
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(150))
+      ;
+      break;
+    case 3:
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(50))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(100))
+      ;
+      g
+        .append('line')
+        .attr('class', 'line')
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(150))
+      ;
       break;
     default:
       break;
