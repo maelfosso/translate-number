@@ -38,6 +38,10 @@ export const drawDigits = (svg: Selection<SVGGElement, unknown, null, undefined>
         drawSeven(g, index);
 
         break;
+      case 8:
+        drawHeight(g, index);
+
+        break;
       default:
         break;
     }
@@ -336,7 +340,7 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
   let g;
   g = svg
     .append('g')
-    .attr('class', 'five')
+    .attr('class', 'seven')
   ;
 
   switch (position) {
@@ -411,6 +415,83 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
         .attr('x2', xAxis(50))
         .attr('y2', yAxis(150))
       ;
+      break;
+    default:
+      break;
+  }
+}
+
+const drawHeight = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
+  let g;
+  g = svg
+      .append('g')
+      .attr('class', 'height')
+    ;
+  switch (position) {
+    case 0:
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(50))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(50))
+      ;
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(100))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(50))
+      break;
+    case 1:
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(50))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(50))
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(50))
+        .attr('y1', yAxis(0))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(50))
+      break;
+    case 2:
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(100))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(100))
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(100))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(100))
+        .attr('y2', yAxis(100))
+      break;
+    case 3:
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(75))
+        .attr('y1', yAxis(100))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(100))
+      g
+        .append('line')
+        .attr('class', `line two position-${position}`)
+        .attr('x1', xAxis(50))
+        .attr('y1', yAxis(150))
+        .attr('x2', xAxis(50))
+        .attr('y2', yAxis(100))
       break;
     default:
       break;
