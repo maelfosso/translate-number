@@ -41,19 +41,23 @@ const Translator = ({ number }: TranslatorProps) => {
   
   return (
     <div>
-      <div>Number to translate : { number }</div>
+      <h2>Translation</h2>
       <div>
-        <div>Translation</div>
+        <strong>Number to translate</strong> : { number }
+      </div>
+      <div>
         <div>
           <svg 
             ref={ref}
             style={{
               height: 150,
               width: 150,
-              background: 'red'
             }}
           >
           </svg>
+        </div>
+        <div>
+          <button type="button">Download image</button>
         </div>
       </div>
     </div>

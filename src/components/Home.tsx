@@ -19,13 +19,20 @@ const Home = () => {
 
   return (
     <div>
-      <form>
-        <div>
-          <label htmlFor="number">Enter the number</label>
-          <input id="number" type="text" onChange={onChange}/>
-          {error && <div className="error">{error}</div> }
-        </div>
-      </form>
+      <nav>
+        <h1>Number Translator</h1>
+      </nav>
+      <div>
+        <h2>Input</h2>
+        <form>
+          <div>
+            <label htmlFor="number">Enter the number</label>
+            <input id="number" type="text" onChange={onChange}/>
+            {error && <div className="error">{error}</div> }
+          </div>
+        </form>
+
+      </div>
       <Translator number={number} />
     </div>
   );
