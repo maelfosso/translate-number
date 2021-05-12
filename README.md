@@ -44,6 +44,12 @@ Start it
 - `yarn install`
 - `yarn start`
 
+### Tests
+
+To run tests
+
+`yarn test`
+
 
 ## Authors
 
