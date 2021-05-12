@@ -28,7 +28,7 @@ const Translator = ({ number }: TranslatorProps) => {
 
     g
       .append('g')
-      .attr('class', '.vline')
+      .attr('class', '0')
       .append('line')
       .attr('stroke', `black`)
       .attr('stroke-width', 2)

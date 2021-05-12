@@ -53,10 +53,15 @@ export const drawDigits = (svg: Selection<SVGGElement, unknown, null, undefined>
 }
 
 const drawOne = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
+  let g;
+  g = svg
+    .append('g')
+    .attr('class', '1')
+  ;
 
   switch (position) {
     case 0:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -68,7 +73,7 @@ const drawOne = (svg: Selection<SVGGElement, unknown, null, undefined>, position
 
       break;
     case 1:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -80,7 +85,7 @@ const drawOne = (svg: Selection<SVGGElement, unknown, null, undefined>, position
       
       break;
     case 2:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -91,7 +96,7 @@ const drawOne = (svg: Selection<SVGGElement, unknown, null, undefined>, position
       ;
       break;
     case 3:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -107,9 +112,15 @@ const drawOne = (svg: Selection<SVGGElement, unknown, null, undefined>, position
 }
 
 const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
+  let g;
+  g = svg
+    .append('g')
+    .attr('class', '2')
+  ;
+
   switch (position) {
     case 0:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -120,7 +131,7 @@ const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position
       
       break;
     case 1:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -131,7 +142,7 @@ const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position
       
       break;
     case 2:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -142,7 +153,7 @@ const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position
       
       break;
     case 3:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -158,9 +169,15 @@ const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position
 }
 
 const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
+  let g;
+  g = svg
+    .append('g')
+    .attr('class', '3')
+  ;
+
   switch (position) {
     case 0:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -171,7 +188,7 @@ const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
       
       break;
     case 1:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -182,7 +199,7 @@ const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
       
       break;
     case 2:
-      svg
+      g
         .append('line')
         
         .attr('stroke', `black`)
@@ -194,7 +211,7 @@ const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
       
       break;
     case 3:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -210,9 +227,15 @@ const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
 }
 
 const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
+  let g;
+  g = svg
+    .append('g')
+    .attr('class', '4')
+  ;
+
   switch (position) {
     case 0:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -223,7 +246,7 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
       
       break;
     case 1:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -234,7 +257,7 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
       
       break;
     case 2:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -245,7 +268,7 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
       
       break;
     case 3:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -264,7 +287,7 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
   let g;
   g = svg
       .append('g')
-      .attr('class', 'five')
+      .attr('class', '5')
     ;
   switch (position) {
     case 0:
@@ -359,9 +382,15 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
 }
 
 const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position: number) => {
+  let g;
+  g = svg
+    .append('g')
+    .attr('class', '6')
+  ;
+
   switch (position) {
     case 0:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -372,7 +401,7 @@ const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position
       
       break;
     case 1:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -383,7 +412,7 @@ const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position
       
       break;
     case 2:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -394,7 +423,7 @@ const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position
       
       break;
     case 3:
-      svg
+      g
         .append('line')
         .attr('stroke', `black`)
         .attr('stroke-width', 2)
@@ -413,7 +442,7 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
   let g;
   g = svg
     .append('g')
-    .attr('class', 'seven')
+    .attr('class', '7')
   ;
 
   switch (position) {
@@ -506,7 +535,7 @@ const drawHeight = (svg: Selection<SVGGElement, unknown, null, undefined>, posit
   let g;
   g = svg
       .append('g')
-      .attr('class', 'height')
+      .attr('class', '8')
     ;
   switch (position) {
     case 0:
@@ -591,7 +620,7 @@ const drawNine = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
   let g;
   g = svg
       .append('g')
-      .attr('class', 'height')
+      .attr('class', '9')
     ;
   switch (position) {
     case 0:
