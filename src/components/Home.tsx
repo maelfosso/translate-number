@@ -18,17 +18,17 @@ const Home = () => {
   }
 
   return (
-    <div>
+    <div data-testid="home">
       <nav>
         <h1>Number Translator</h1>
       </nav>
       <div>
         <h2>Input</h2>
-        <form>
+        <form data-testid="form">
           <div>
             <label htmlFor="number">Enter the number</label>
-            <input id="number" type="text" onChange={onChange}/>
-            {error && <div className="error">{error}</div> }
+            <input data-testid="input-number" id="number" type="text" onChange={onChange}/>
+            {error && <div className="error" data-testid="home-error">{error}</div> }
           </div>
         </form>
 

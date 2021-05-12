@@ -84,7 +84,7 @@ const Translator = ({ number }: TranslatorProps) => {
   }
 
   return (
-    <div>
+    <div data-testid="translator">
       <h2>Translation</h2>
       <div>
         <strong>Number to translate</strong> : { number }

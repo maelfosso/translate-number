@@ -32,9 +32,11 @@ You must have installed
 ### Setup
 
 Clone the repository
+
 `git clone https://github.com/maelfosso/translate-number`
 
 Change  the directory
+
 `cd translate-number`
 
 Start it
