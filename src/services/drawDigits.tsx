@@ -56,7 +56,7 @@ const drawOne = (svg: Selection<SVGGElement, unknown, null, undefined>, position
   let g;
   g = svg
     .append('g')
-    .attr('class', '1')
+    .attr('class', '_1')
   ;
 
   switch (position) {
@@ -115,7 +115,7 @@ const drawTwo = (svg: Selection<SVGGElement, unknown, null, undefined>, position
   let g;
   g = svg
     .append('g')
-    .attr('class', '2')
+    .attr('class', '_2')
   ;
 
   switch (position) {
@@ -172,7 +172,7 @@ const drawThree = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
   let g;
   g = svg
     .append('g')
-    .attr('class', '3')
+    .attr('class', '_3')
   ;
 
   switch (position) {
@@ -230,7 +230,7 @@ const drawFour = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
   let g;
   g = svg
     .append('g')
-    .attr('class', '4')
+    .attr('class', '_4')
   ;
 
   switch (position) {
@@ -287,7 +287,7 @@ const drawFive = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
   let g;
   g = svg
       .append('g')
-      .attr('class', '5')
+      .attr('class', '_5')
     ;
   switch (position) {
     case 0:
@@ -385,7 +385,7 @@ const drawSix = (svg: Selection<SVGGElement, unknown, null, undefined>, position
   let g;
   g = svg
     .append('g')
-    .attr('class', '6')
+    .attr('class', '_6')
   ;
 
   switch (position) {
@@ -442,7 +442,7 @@ const drawSeven = (svg: Selection<SVGGElement, unknown, null, undefined>, positi
   let g;
   g = svg
     .append('g')
-    .attr('class', '7')
+    .attr('class', '_7')
   ;
 
   switch (position) {
@@ -535,7 +535,7 @@ const drawHeight = (svg: Selection<SVGGElement, unknown, null, undefined>, posit
   let g;
   g = svg
       .append('g')
-      .attr('class', '8')
+      .attr('class', '_8')
     ;
   switch (position) {
     case 0:
@@ -620,7 +620,7 @@ const drawNine = (svg: Selection<SVGGElement, unknown, null, undefined>, positio
   let g;
   g = svg
       .append('g')
-      .attr('class', '9')
+      .attr('class', '_9')
     ;
   switch (position) {
     case 0:

@@ -3,6 +3,11 @@ import React from 'react';
 import Home from '../components/Home';
 import Translator from '../components/Translator';
 
+const mapDigitLines = {
+  "1": 1,
+  "2": 1
+};
+
 describe('Translator', () => {
   it ('contains some html elements', async () => {
     render(<Translator number={0} />);
@@ -22,6 +27,32 @@ describe('Translator', () => {
 
     const canvas = document.querySelectorAll('canvas');
     expect(canvas.length).toBe(1);
+  });
+
+  it ('contains the lines from each digits 9254', async () => {
+    const number:number = 9254;
+    render(<Translator number={number} />);
+
+    const svg = document.querySelector('svg');
+    const digits = Array.from(number.toString()).map(Number).reverse();
+
+    expect(svg?.querySelector(`g._${digits[0]}`)).toBeDefined();
+    expect(svg?.querySelector(`g._${digits[1]}`)).toBeDefined();
+    expect(svg?.querySelector(`g._${digits[2]}`)).toBeDefined();
+    expect(svg?.querySelector(`g._${digits[3]}`)).toBeDefined();
+  });
+
+  it ('contains the lines from each digits 1876', async () => {
+    const number:number = 1876;
+    render(<Translator number={number} />);
+
+    const svg = document.querySelector('svg');
+    const digits = Array.from(number.toString()).map(Number).reverse();
+
+    expect(svg?.querySelector(`g._${digits[0]}`)).toBeDefined();
+    expect(svg?.querySelector(`g._${digits[1]}`)).toBeDefined();
+    expect(svg?.querySelector(`g._${digits[2]}`)).toBeDefined();
+    expect(svg?.querySelector(`g._${digits[3]}`)).toBeDefined();
   });
 
 });
